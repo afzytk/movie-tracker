@@ -1,13 +1,13 @@
-import './css/App.css'
-import Home from "./pages/Home"
-import Favorites from "./pages/Favorites"
-import NavBar  from "./components/NavBar"
-import {Routes,Route} from "react-router-dom"
-import  {MovieProvider} from "./context/MovieContext"
+import "./css/App.css";
+import Home from "./pages/Home";
+import Favorites from "./pages/Favorites";
+import NavBar from "./components/NavBar";
+import { Routes, Route } from "react-router-dom";
+import { MovieProvider } from "./context/MovieContext.jsx";
 
 function App() {
   return (
-      <MovieProvider>
+    <MovieProvider>
       <NavBar />
       <main className="main-content">
         <Routes>
@@ -15,9 +15,8 @@ function App() {
           <Route path="/favorites" element={<Favorites />} />
         </Routes>
       </main>
-      </MovieProvider>
+    </MovieProvider>
   );
 }
 
-
-export default App
+export default App;
